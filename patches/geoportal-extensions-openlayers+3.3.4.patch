@@ -1,0 +1,22 @@
+diff --git a/node_modules/geoportal-extensions-openlayers/src/OpenLayers/Controls/Drawing.js b/node_modules/geoportal-extensions-openlayers/src/OpenLayers/Controls/Drawing.js
+index d0313f3..c84e7f9 100644
+--- a/node_modules/geoportal-extensions-openlayers/src/OpenLayers/Controls/Drawing.js
++++ b/node_modules/geoportal-extensions-openlayers/src/OpenLayers/Controls/Drawing.js
+@@ -163,6 +163,7 @@ var logger = Logger.getLogger("Drawing");
+  *      }
+  * });
+  */
++
+ var Drawing = (function (Control) {
+     /**
+      * See {@link ol.control.Drawing}
+@@ -749,7 +750,8 @@ var Drawing = (function (Control) {
+         this.popupOvl = null;
+ 
+         this.layer = null;
+-        if (this.options.layer && this.options.layer instanceof VectorLayer) {
++
++        if (this.options.layer) {
+             this.layer = this.options.layer;
+         }
+ 
